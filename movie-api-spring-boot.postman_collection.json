@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "eb5b5c9f-e769-4e21-995d-ac5e854ec59e",
+		"name": "movie-api-spring-boot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get movie by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/movie?movieId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"movie"
+					],
+					"query": [
+						{
+							"key": "movieId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Pulp Fiction\",\r\n    \"genre\": \"DRAMA\",\r\n    \"releaseYear\": 1994,\r\n    \"director\": \"Quentin Tarantino\",\r\n    \"cast\": [\r\n        {\r\n            \"name\": \"John Travolta\"\r\n        },\r\n        {\r\n            \"name\": \"Uma Thurman\"\r\n        },\r\n        {\r\n            \"name\": \"Samuel L. Jackson\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/movie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"movie"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
