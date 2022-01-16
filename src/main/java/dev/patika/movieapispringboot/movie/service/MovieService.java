@@ -1,29 +1,16 @@
 package dev.patika.movieapispringboot.movie.service;
 
-import dev.patika.movieapispringboot.movie.controller.MovieResponse;
-import dev.patika.movieapispringboot.movie.enums.Genre;
-import org.springframework.stereotype.Service;
+import dev.patika.movieapispringboot.actor.service.Actor;
 
-import java.util.ArrayList;
 import java.util.List;
 
-@Service
-public class MovieService {
-    List<Movie> movieList = new ArrayList<>();
+public interface MovieService {
 
-    public Object getMovie(String movieId) {
-        Movie dummyMovie = Movie.builder()
-                .id(1L)
-                .name("Pulp Fiction")
-                .releaseYear(1994)
-                .genre(Genre.DRAMA)
-                .director("Quentin Tarantino")
-                .build();
-        return MovieResponse.convertFrom(dummyMovie);
-    }
+    /*
+    List<Actor> actors: Actor list to create new actors.
+    List<Long> actorIds: actorIds that exist in database.
+     */
+    Long create(Movie movie, List<Actor> actors, List<Long> actorIds);
 
-    public Long createMovie(Movie movie) {
-        movieList.add(movie);
-        return 1L;
-    }
+    Movie retrieve(Long id);
 }
