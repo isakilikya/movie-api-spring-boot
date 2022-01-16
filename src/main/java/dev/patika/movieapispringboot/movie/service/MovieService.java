@@ -1,5 +1,6 @@
 package dev.patika.movieapispringboot.movie.service;
 
+import dev.patika.movieapispringboot.movie.controller.MovieResponse;
 import dev.patika.movieapispringboot.movie.enums.Genre;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +18,7 @@ public class MovieService {
                 .genre(Genre.DRAMA)
                 .director("Quentin Tarantino")
                 .build();
-        return dummyMovie;
+        return MovieResponse.convertFrom(dummyMovie);
     }
 
     public void createMovie(Movie movie) {

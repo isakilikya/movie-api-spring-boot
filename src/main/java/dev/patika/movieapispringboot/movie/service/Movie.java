@@ -7,6 +7,7 @@ import lombok.*;
 @Builder
 @EqualsAndHashCode
 public class Movie {
+    private Long id;
     private String name;
     private Genre genre;
     private Integer releaseYear;
