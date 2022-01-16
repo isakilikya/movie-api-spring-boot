@@ -1,5 +1,7 @@
-package dev.patika.movieapispringboot.movie;
+package dev.patika.movieapispringboot.movie.controller;
 
+import dev.patika.movieapispringboot.movie.service.Movie;
+import dev.patika.movieapispringboot.movie.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

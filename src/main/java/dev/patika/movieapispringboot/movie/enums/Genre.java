@@ -1,4 +1,4 @@
-package dev.patika.movieapispringboot.movie;
+package dev.patika.movieapispringboot.movie.enums;
 
 public enum Genre {
     ACTION,
