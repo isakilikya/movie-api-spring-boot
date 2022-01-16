@@ -39,7 +39,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Pulp Fiction\",\r\n    \"genre\": \"DRAMA\",\r\n    \"releaseYear\": 1994,\r\n    \"director\": \"Quentin Tarantino\",\r\n    \"cast\": [\r\n        {\r\n            \"name\": \"John Travolta\"\r\n        },\r\n        {\r\n            \"name\": \"Uma Thurman\"\r\n        },\r\n        {\r\n            \"name\": \"Samuel L. Jackson\"\r\n        }\r\n    ]\r\n}",
+					"raw": "{\r\n    \"name\": \"Pulp Fiction\",\r\n    \"genre\": \"DRAMA\",\r\n    \"releaseYear\": 1994,\r\n    \"director\": \"Quentin Tarantino\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

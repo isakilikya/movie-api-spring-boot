@@ -13,6 +13,7 @@ public class MovieService {
 
     public Object getMovie(String movieId) {
         Movie dummyMovie = Movie.builder()
+                .id(1L)
                 .name("Pulp Fiction")
                 .releaseYear(1994)
                 .genre(Genre.DRAMA)
@@ -21,7 +22,8 @@ public class MovieService {
         return MovieResponse.convertFrom(dummyMovie);
     }
 
-    public void createMovie(Movie movie) {
+    public Long createMovie(Movie movie) {
         movieList.add(movie);
+        return 1L;
     }
 }

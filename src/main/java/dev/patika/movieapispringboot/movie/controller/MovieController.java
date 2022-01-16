@@ -17,19 +17,18 @@ public class MovieController {
     }
 
     @GetMapping
-    public Object getMovie(@RequestParam String movieId) {
+    public Object retrieve(@RequestParam String movieId) {
         return movieService.getMovie(movieId);
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Object createMovie(@RequestBody Movie movie) {
+    public Object create(@RequestBody MovieRequest request) {
         try {
-            movieService.createMovie(movie);
+            Movie movie = request.convertToMovie();
+            return movieService.createMovie(movie);
         } catch (Exception e) {
             return e.getMessage();
         }
-
-        return movie;
     }
 }
