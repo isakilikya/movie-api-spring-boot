@@ -16,7 +16,7 @@ public class MovieServiceTest {
     MovieServiceImpl underTest;
 
     @Test
-    void itShouldAddNewMovieSuccessfully() {
+    void it_should_add_new_movie_successfully() {
         // given
         Movie movie = Movie.builder()
                 .name("Pulp Fiction")
@@ -32,7 +32,7 @@ public class MovieServiceTest {
     }
 
     @Test
-    void itShouldThrowExceptionWhileAddingNewMovieBecauseOfNullName() {
+    void it_should_throw_exception_while_adding_new_movie_because_of_null_name() {
         // given
         Movie movie = Movie.builder()
                 .name(null)
@@ -53,7 +53,7 @@ public class MovieServiceTest {
     }
 
     @Test
-    void itShouldThrowExceptionWhileRetrievingAMovieBecauseItDoesntExist() {
+    void it_should_throw_exception_while_retrieving_a_movie_because_it_doesnt_exist() {
         // given
         Exception exception = null;
         Long randomNumber = 1234567L;
